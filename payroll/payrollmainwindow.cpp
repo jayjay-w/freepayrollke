@@ -2,15 +2,20 @@
 #include "ui_payrollmainwindow.h"
 #include "settingsmanager.h"
 #include "selectcompanydialog.h"
+#include "../libfreepayroll/payrollxmlmanager.h"
 
+#include <QDebug>
 PayrollMainWindow::PayrollMainWindow(QWidget *parent) :
 	QMainWindow(parent),
 	ui(new Ui::PayrollMainWindow)
 {
 	ui->setupUi(this);
 	this->showMaximized();
-	selectCompany();
+	//selectCompany();
 	this->restoreGeometry(SettingsManager::getValue("MainWindowState").toByteArray());
+	if (!m_xml) {
+		qDebug() << "No xml";
+	}
 }
 
 PayrollMainWindow::~PayrollMainWindow()

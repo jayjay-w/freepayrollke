@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 class SelectCompanyDialog;
+class PayrollXMLManager;
 
 namespace Ui {
 class PayrollMainWindow;
@@ -16,6 +17,7 @@ class PayrollMainWindow : public QMainWindow
 public:
 	explicit PayrollMainWindow(QWidget *parent = 0);
 	~PayrollMainWindow();
+	PayrollXMLManager *m_xml;
 
 public slots:
 	void selectCompany();

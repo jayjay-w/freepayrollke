@@ -12,6 +12,8 @@ TARGET = freepayroll
 win32:TARGET = FreePayroll
 TEMPLATE = app
 
+INCLUDEPATH += . ../libfreepayroll
+LIBS +=-L ../build/libfreepayroll
 
 SOURCES += main.cpp\
         payrollmainwindow.cpp \
