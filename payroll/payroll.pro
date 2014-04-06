@@ -14,8 +14,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        payrollmainwindow.cpp
+        payrollmainwindow.cpp \
+    selectcompanydialog.cpp \
+    settingsmanager.cpp
 
-HEADERS  += payrollmainwindow.h
+HEADERS  += payrollmainwindow.h \
+    selectcompanydialog.h \
+    settingsmanager.h
 
-FORMS    += payrollmainwindow.ui
+FORMS    += payrollmainwindow.ui \
+    selectcompanydialog.ui
